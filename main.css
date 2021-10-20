@@ -54,11 +54,10 @@ h1 {
 .main__list-container {
     display: flex;
     flex-direction: row;
-    /* justify-content: left; */
+    justify-content: space-between;
 }
 
 .main__list-container ul {
-    margin-right: auto;
     /* visibility: hidden; */
 }
 
@@ -69,24 +68,30 @@ h1 {
 }
 
 .main__warehouse-photo__shadow {
-    background-image: url('/images/warehouse-stock-photo.jpg');
+    background-image: url('images/warehouse-stock-photo.jpg');
     position: relative;
-    /* top: 15%; */
-    /* left: 5%; */
-    /* right: 5%; */
-    /* height: 90%; */
     background-size: auto;
     background-position: center bottom;
     background-repeat: no-repeat;
     border-radius: inherit;
     -webkit-filter: blur(25px);
     filter: blur(25px);
+    height: 350px;
+    width: 350px;
+    margin-right: 20px;
+    z-index: 2;
+    object-fit: cover;
 }
 
 .main__warehouse-photo__actual {
-    background-image: url('/images/warehouse-stock-photo.jpg');
-    max-width: 320px;
-    height: 320px; 
+    position: relative;
+    background-image: url('images/warehouse-stock-photo.jpg');
+    height: 350px;
+    width: 350px;
+    top: -50%;
+    margin-right: 20px;
+    object-fit: cover;
+    z-index: 3; 
 }
 
 pre code {
