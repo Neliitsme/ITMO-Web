@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ITMO, web, labs, warehouse, info, system">
     <meta name="description" content="2021 ITMO web project; done by Nelite">
 
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/icon.jpeg">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
     <script src="main.js"></script>
 
@@ -16,19 +16,27 @@
 </head>
 <body>
     <header>
-        <h1>
-            <img class="header__icon" src="images/icon.jpeg" alt="Nelige Icon">Nelige Storage Services
-            <button class="header__darkmode-switch" onclick="darkMode()">💡</button>
-        </h1>
-        <!--Prolly replace with a proper banner later-->
-        <nav class="header__nav-bar">
-            <ul>
-                <li><a href="index.html">Main Page</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="search.html">Search Item</a></li>
-                <li><a href="funny.html">Comedy gold</a></li>
-            </ul>
-        </nav>
+        <div class="topnav">
+            <div class="topnav__icon-name">
+                <img class="topnav__icon-name_icon" src="images/icon.jpeg" alt="Nelige Icon">
+                <div>
+                    <h1 class="topnav__icon-name_name">Nelige</h1>
+                    <p class="topnav__icon-name_slogan">Your provider of good vibes.</p>
+                </div>
+            </div>
+            <div class="topnav__navbox">
+                <nav class="topnav__navbox_nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="search.html">Tracking</a></li>
+                        <li><a href="funny.html">Comedy gold</a></li>
+                    </ul>
+                </nav>
+                <img class="topnav__navbox_switch" src="icons/dark_mode.svg">
+                <img class="topnav__navbox_account" src="icons/account_circle.svg">
+            </div>    
+        </div>
     </header>
     <main>
         <section>
@@ -42,11 +50,11 @@
                     <li>Sesame street</li>
                     <li>Earth of parallel universe #1337</li>
                 </ul>
-                <div class="main__warehouse-photo">
+                <!-- <div class="main__warehouse-photo">
                     <div class="main__warehouse-photo__shadow"></div>
                     <div class="main__warehouse-photo__actual"></div>
-                    <!-- <img src="/images/warehouse-stock-photo.jpg" alt="Stock photo of a warehouse facility"> -->
-                </div>
+                    <img src="/images/warehouse-stock-photo.jpg" alt="Stock photo of a warehouse facility">
+                </div> -->
             </div>
         </section>
 <pre><code>
@@ -57,8 +65,7 @@ if (Visitor.Hobby.Contains("coding"))
 </code></pre>
     </main>
     <footer>
-        <q class="footer-quote"><i>Your provider of good vibes</i></q>
-        <div class="footer-author"><b>2021 Nelite</b></div>
+        <div class="footer-author"><b>Nelite, 2021</b></div>
     </footer>
 </body>
 </html>
