@@ -1,0 +1,26 @@
+.darkmode {
+    background-color: rgb(0, 30, 60);
+    color: white;
+}
+
+/* .header__darkmode-switch {
+    float: right;
+} */
+
+.h2-styled {
+    border-top: 1px solid rgb(0, 0, 0);
+    width: 10em;
+    padding-top: 0.5em;
+}
+
+.footer-author {
+    text-align: center;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 45em) {
+    .h2-styled {
+        width: 5em;
+    }
+}
