@@ -56,7 +56,7 @@
     margin: 1em;
 }
 
-.topnav__navbox_nav ul {
+.topnav__navbox_nav_list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -65,12 +65,12 @@
     justify-content: space-between;
 }
 
-.topnav__navbox_nav li {
+.topnav__navbox_nav_list li {
     margin: 2em 1em;
     text-align: center;
 }
 
-.topnav__navbox_nav a {
+.topnav__navbox_nav_list a {
     /* flex: 1 1 0; */
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -78,7 +78,7 @@
     /* margin: 0 0.5em; */
 }
 
-.topnav__navbox_nav a:hover {
+.topnav__navbox_nav_list a:hover {
     background-color: rgb(233, 235, 241);
 }
 
@@ -95,9 +95,13 @@
 @media (max-width: 45em) {
     .topnav__navbox_button {
         display: block;
-        margin: 1.5em 1em 1em;
+        margin: 1em;
         background-color: inherit;
         border: none;
+        background-image: url("../icons/list.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
     }
 
     .topnav__navbox_nav {
@@ -105,18 +109,19 @@
         display: flex;
     }
 
-    .topnav__navbox_nav ul {
+    .topnav__navbox_nav_list {
         display: none;
         position: absolute;
-        margin-top: 3.5em;
+        margin-top: 80px;
         min-width: 9em;
         left: -2.5em;
         border-radius: 8px;
     }
 
-    .topnav__navbox_nav:hover ul {
+    .topnav__navbox_nav_show {
         display: flex;
         flex-direction: column;
         background-color: rgb(242, 244, 248);
     }
+    
 }

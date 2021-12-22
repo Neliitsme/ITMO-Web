@@ -13,10 +13,8 @@
     padding-top: 0.5em;
 }
 
-.footer-author {
+.footer__author, .footer__load-time {
     text-align: center;
-    right: 0;
-    bottom: 0;
 }
 
 @media (max-width: 45em) {

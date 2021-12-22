@@ -15,6 +15,9 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
+  <script src="../global-scripts/load-time.js"></script>
+  <script src="../global-scripts/topnav.js"></script>
+
   <title>About</title>
 
 </head>
@@ -22,30 +25,30 @@
 <body>
   <header>
     <div class="topnav">
-      <div class="topnav__icon-name">
-        <a href="../index.html">
-          <img class="topnav__icon-name_icon" src="../images/icon.jpeg" alt="Nelige Icon">
-        </a>
-        <div class="topnav__icon-name_textbox">
-          <h1>Nelige</h1>
-          <p><i>Your provider of good vibes.</i></p>
+        <div class="topnav__icon-name">
+            <a href="../index.html">
+                <img class="topnav__icon-name_icon" src="../images/icon.jpeg" alt="Nelige Icon">
+            </a>
+            <div class="topnav__icon-name_textbox">
+                <h1>Nelige</h1>
+                <p><i>Your provider of good vibes.</i></p>
+            </div>
         </div>
-      </div>
-      <div class="topnav__navbox">
-        <nav class="topnav__navbox_nav">
-          <button class="topnav__navbox_button"><img src="../icons/list.svg" alt=""></button>
-          <ul class="temp">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about/about.html">About</a></li>
-            <li><a href="../tracking/tracking.html">Tracking</a></li>
-            <li><a href="../funny/funny.html">Comedy gold</a></li>
-          </ul>
-        </nav>
-        <img class="topnav__navbox_switch" src="../icons/dark_mode.svg">
-        <img class="topnav__navbox_account" src="../icons/account_circle.svg">
-      </div>
+        <div class="topnav__navbox">
+            <nav class="topnav__navbox_nav">
+                <button onclick="navDropdown()" class="topnav__navbox_button"></button>
+                <ul class="topnav__navbox_nav_list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../tracking/tracking.html">Tracking</a></li>
+                    <li><a href="../funny/funny.html">Comedy gold</a></li>
+                </ul>
+            </nav>
+            <img class="topnav__navbox_switch" src="../icons/dark_mode.svg">
+            <img class="topnav__navbox_account" src="../icons/account_circle.svg">
+        </div>
     </div>
-  </header>
+</header>
   <main>
     <section>
       <h2>Table</h2>

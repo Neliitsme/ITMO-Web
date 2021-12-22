@@ -15,6 +15,8 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
+    <script src="global-scripts/load-time.js"></script>
+    <script src="global-scripts/topnav.js"></script>
     <script src="main.js"></script>
 
     <title>Nelige</title>
@@ -34,8 +36,8 @@
             </div>
             <div class="topnav__navbox">
                 <nav class="topnav__navbox_nav">
-                    <button class="topnav__navbox_button"><img src="icons/list.svg" alt=""></button>
-                    <ul class="temp">
+                    <button onclick="navDropdown()" class="topnav__navbox_button"></button>
+                    <ul class="topnav__navbox_nav_list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about/about.html">About</a></li>
                         <li><a href="tracking/tracking.html">Tracking</a></li>
@@ -116,7 +118,8 @@
     </main>
     <!-- please add waves! -->
     <footer>
-        <div class="footer-author"><b>Nelite, 2021</b></div>
+        <div class="footer__author"><b>Nelite, 2021</b></div>
+        <div class="footer__load-time"></div>
     </footer>
 </body>
 
