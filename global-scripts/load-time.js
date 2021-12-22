@@ -1,5 +1,7 @@
 // let start = new Date().getTime();
-window.onload = getLoadTime;
+window.addEventListener("load", function(event) {
+    getLoadTime()
+}, false)
 
 function getLoadTime() {
     var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
