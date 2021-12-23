@@ -1,7 +1,6 @@
 
 function navDropdown() {
     document.querySelector(".topnav__navbox_nav_list").classList.toggle("topnav__navbox_nav_show");
-    console.log(document.querySelector(".topnav__navbox_nav_list"));
 }
 
 window.onclick = function (event) {

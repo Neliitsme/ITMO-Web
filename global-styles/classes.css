@@ -1,14 +1,5 @@
-.darkmode {
-    background-color: rgb(0, 30, 60);
-    color: white;
-}
-
-/* .header__darkmode-switch {
-    float: right;
-} */
-
 .h2-styled {
-    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(67, 76, 94);
     width: 10em;
     padding-top: 0.5em;
 }
