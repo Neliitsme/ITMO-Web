@@ -19,6 +19,7 @@
     <script src="../global-scripts/load-time.js"></script>
     <script src="../global-scripts/topnav.js"></script>
     <script src="../global-scripts/darkmode.js"></script>
+    <script src="table-data.js"></script>
 
     <title>Profile</title>
 
@@ -52,7 +53,38 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section>
+            <h2>My items</h2>
+            <div class="items-table">
+                <form action="#">
+                    <input type="text" class="items-table__input" placeholder="Enter item ID">
+                    <button onclick="addItem()" class="items-table__add">Add</button>
+                </form>
+                <div class="table-wrapper">
+                    <table class="items-table__data">
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>temp</td>
+                                <td>temp</td>
+                                <td>temp</td>
+                            </tr>
+                            <tr>
+                                <td>temp</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="footer__author"><b>Nelite, 2021</b></div>
         <div class="footer__load-time"></div>

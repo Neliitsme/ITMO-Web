@@ -4,6 +4,10 @@
     padding-top: 0.5em;
 }
 
+.table-wrapper {
+    overflow: auto;
+}
+
 .footer__author, .footer__load-time {
     text-align: center;
 }
