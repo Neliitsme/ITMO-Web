@@ -7,19 +7,24 @@
     <meta name="keywords" content="ITMO, web, labs, warehouse, info, system">
     <meta name="description" content="2021 ITMO web project; done by Nelite">
 
+    <link rel="icon" href="images/icon.jpeg">
+
     <link rel="stylesheet" href="global-styles/default-tags.css">
     <link rel="stylesheet" href="global-styles/topnav.css">
     <link rel="stylesheet" href="global-styles/darkmode.css">
     <link rel="stylesheet" href="global-styles/classes.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="images/icon.jpeg">
+    <!-- Import Splide -->
+    <link rel="stylesheet" href="global-styles/splide-default.min.css">
+
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
     <script src="global-scripts/load-time.js"></script>
     <script src="global-scripts/topnav.js"></script>
     <script src="global-scripts/darkmode.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
+    <script type="module" src="main.js"></script>
 
     <title>Nelige</title>
 </head>
@@ -74,8 +79,7 @@
                     </ul>
                 </div>
                 <div class="list-container__picture">
-                    <img src="images/warehouse-stock-photo-blur.png"
-                        alt="Picture of warehouse">
+                    <img src="images/warehouse-stock-photo-blur.png" alt="Picture of warehouse">
                 </div>
             </div>
         </section>
@@ -84,33 +88,64 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eum aliquam odit, nisi distinctio
                 tempore culpa facilis nobis incidunt rem hic illum, beatae dolore quaerat vel rerum tenetur sapiente
                 excepturi?</p>
-            <div class="news__cards">
-                <div class="news__cards_card">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis mollitia eum porro
-                    voluptas rerum voluptate reprehenderit eaque aspernatur impedit, expedita velit cum et reiciendis
-                    exercitationem quia distinctio tempore ad?
+            <div class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"
+                            style="fill: black;">
+                            <path
+                                d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"
+                            style="fill: black;">
+                            <path
+                                d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z">
+                            </path>
+                        </svg>
+                    </button>
                 </div>
-                <div class="news__cards_card">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae at a voluptatibus
-                    adipisci doloremque alias recusandae voluptatum et. Asperiores obcaecati alias a odio quod aut
-                    voluptatem, animi neque est.
+                <div class="splide__track">
+                    <div class="news__cards splide__list">
+                        <div class="news__cards_card splide__slide">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis mollitia eum
+                            porro
+                            voluptas rerum voluptate reprehenderit eaque aspernatur impedit, expedita velit cum et
+                            reiciendis
+                            exercitationem quia distinctio tempore ad?
+                        </div>
+                        <div class="news__cards_card splide__slide">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae at a
+                            voluptatibus
+                            adipisci doloremque alias recusandae voluptatum et. Asperiores obcaecati alias a odio quod
+                            aut
+                            voluptatem, animi neque est.
+                        </div>
+                        <div class="news__cards_card splide__slide">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, praesentium laboriosam
+                            dolorum ab
+                            qui ex, eveniet numquam fugiat autem est omnis accusantium provident sequi quas aut. Quae
+                            earum odio
+                            blanditiis.
+                        </div>
+                        <div class="news__cards_card splide__slide">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, quos adipisci
+                            voluptatum
+                            eos eius inventore necessitatibus nobis repudiandae architecto blanditiis tempora iste
+                            dolore illo
+                            magni sit aperiam. Adipisci, excepturi.
+                        </div>
+                        <div class="news__cards_card splide__slide">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur ad fuga veritatis
+                            iure
+                            aut, rerum qui reiciendis, amet molestiae atque natus dicta blanditiis earum. Cumque harum
+                            quam
+                            quidem blanditiis!
+                        </div>
+                    </div>
                 </div>
-                <div class="news__cards_card">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, praesentium laboriosam dolorum ab
-                    qui ex, eveniet numquam fugiat autem est omnis accusantium provident sequi quas aut. Quae earum odio
-                    blanditiis.
-                </div>
-                <div class="news__cards_card">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, quos adipisci voluptatum
-                    eos eius inventore necessitatibus nobis repudiandae architecto blanditiis tempora iste dolore illo
-                    magni sit aperiam. Adipisci, excepturi.
-                </div>
-                <div class="news__cards_card">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur ad fuga veritatis iure
-                    aut, rerum qui reiciendis, amet molestiae atque natus dicta blanditiis earum. Cumque harum quam
-                    quidem blanditiis!
-                </div>
-
             </div>
         </section>
 

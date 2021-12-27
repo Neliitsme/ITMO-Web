@@ -21,22 +21,28 @@
     width: 55%;
 }
 
+.splide__track {
+    width: 90%;
+}
+
+.splide {
+    padding-left: 10%;
+}
+
 .news__cards {
-    display: flex;
-    justify-content: space-between;
-    overflow: auto;
+
+}
+
+.splide__slide {
+
 }
 
 .news__cards_card {
-    max-height: 15em;
-    min-width: 15em;
-    margin: 1em 2em;
     padding: 1em;
     text-align: left;
     border-style: solid;
     border-width: 1px;
     border-radius: 6px;
-    /* overflow: hidden; */
 
 }
 
@@ -56,6 +62,14 @@
     }
 
     .news p {
+        width: 100%;
+    }
+    
+    .splide {
+        padding: 6.75%;
+    }
+
+    .splide__track {
         width: 100%;
     }
 
