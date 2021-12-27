@@ -58,7 +58,8 @@
             <h2>My items</h2>
             <div class="items-table">
                 <form action="#">
-                    <input type="text" class="items-table__input" placeholder="Enter item ID">
+                    <input type="number" class="items-table__input" placeholder="Enter item ID">
+                    <img class="items-table__loading" src="../icons/tail-spin.svg">
                     <button onclick="addItem()" class="items-table__add">Add</button>
                 </form>
                 <div class="table-wrapper">
@@ -69,16 +70,6 @@
                             <th>Status</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>temp</td>
-                                <td>temp</td>
-                                <td>temp</td>
-                            </tr>
-                            <tr>
-                                <td>temp</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -8,6 +8,7 @@
     align-self: center;
     width: 70%;
     height: 1.5em;
+    border: 1px solid rgb(216, 222, 233);
 }
 
 .items-table__add {
@@ -21,12 +22,20 @@
 }
 
 .items-table__input {
-    border: 1px solid rgb(216, 222, 233);
+    border: none;
     width: 80%;
 }
 
+.items-table__loading {
+    display: none;
+}
+
+.loading--show {
+    display: block;
+}
+
 .items-table__data {
-    
+
 }
 
 .items-table__data_delete {

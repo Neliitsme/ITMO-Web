@@ -32,38 +32,74 @@ function saveTableState() {
     localStorage.setItem("table-data", table.innerHTML);
 }
 
+function toggleLoading() {
+    document.querySelector(".items-table__loading").classList.toggle("loading--show");
+}
+
 function addItem() {
     var inputId = document.querySelector(".items-table__input").value;
     if (inputId.trim() === "") {
         alert("Write something first!");
         return;
     }
+    toggleLoading();
 
     var entryRow = document.createElement("tr");
     var entryId = document.createElement("td");
-    var entryTemplateData = document.createElement("td");
-    var entryTemplateDataSecond = document.createElement("td");
-    var templateData = document.createTextNode("Template");
-    var templateDataSecond = document.createTextNode("Template");
-    entryTemplateData.appendChild(templateData);
-    entryTemplateDataSecond.appendChild(templateDataSecond);
-
+    var entryName = document.createElement("td");
+    var entryStatus = document.createElement("td");
     var id = document.createTextNode(inputId);
     entryId.appendChild(id);
+    
+    var controller = new AbortController();
+    const timeoutId = setTimeout(() => {
+        controller.abort(); 
+        alert("Request timeout."); 
+        toggleLoading()
+    }, 10000)
 
-    var deleteButton = document.createElement("td");
-    deleteButton.className = "items-table__data_delete";
-    addDeleteFunction(deleteButton);
+    var fetchedTodos = fetch('https://jsonplaceholder.typicode.com/todos', { signal: controller.signal })
+    .then(response => response.json())
+    .then(todo => {
+        clearTimeout(timeoutId);
+        if (todo[inputId - 1] === undefined) {
+            alert("ID not found.");
+            toggleLoading();
+            return;
+        }
+        else {
+            return [todo[inputId - 1].title, todo[inputId - 1].completed];
+        }
+    }).catch(error => {
+        clearTimeout(timeoutId);
+        toggleLoading();
+        alert("Connection loss.");
+    });
 
-    entryRow.appendChild(entryId);
-    entryRow.appendChild(entryTemplateData);
-    entryRow.appendChild(entryTemplateDataSecond);
-    entryRow.appendChild(deleteButton);
+    fetchedTodos.then(namestatus => {
+        if (namestatus === undefined) {
+            return;
+        }
 
-
-    document.querySelector(".items-table__data tbody").appendChild(entryRow);
-    document.querySelector(".items-table__input").value = "";
-
-    saveTableState();
+        var deleteButton = document.createElement("td");
+        deleteButton.className = "items-table__data_delete";
+        addDeleteFunction(deleteButton);
+    
+        entryRow.appendChild(entryId);
+        var nameData = document.createTextNode(namestatus[0]);
+        var statusData = document.createTextNode(namestatus[1]);
+        entryName.appendChild(nameData);
+        entryStatus.appendChild(statusData);
+        entryRow.appendChild(entryName);
+        entryRow.appendChild(entryStatus);
+        entryRow.appendChild(deleteButton);
+    
+    
+        document.querySelector(".items-table__data tbody").appendChild(entryRow);
+        document.querySelector(".items-table__input").value = "";
+    
+        toggleLoading();
+        saveTableState();
+    })
 }
 
