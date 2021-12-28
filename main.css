@@ -25,6 +25,10 @@
     width: 90%;
 }
 
+.splide__arrows {
+    
+}
+
 .splide {
     padding-left: 10%;
 }
@@ -34,7 +38,6 @@
 }
 
 .splide__slide {
-
 }
 
 .news__cards_card {
