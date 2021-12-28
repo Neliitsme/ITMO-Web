@@ -2,9 +2,10 @@
 
 ITMO web programming labs
 
-*stay tuned...*
-
 ```
 Неледов Илья Павлович, M33081
 Тема: Визитная карточка склада
 ```
+
+## Dummy
+![](images/dummy.png)
